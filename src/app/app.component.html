@@ -1,11 +1,35 @@
 <div>
   <p>name: {{ name }}</p>
+  <p>age: {{ age }}</p>
   <p>street: {{ address.street }}</p>
-  <p>street: {{ address.city }}</p>
-  <p>street: {{ address.telephone }}</p>
+  <p>city: {{ address.city }}</p>
+  <p>telephone: {{ address.telephone }}</p>
   <ul>
     <li ngFor="let hobby of hobbies">
-      {{ hobby }}
+      {{ hobbies }}
     </li>
   </ul>
 </div>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{ user
+    }}<button (click)="sayHello()">
+      Hello!
+    </button>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let usuario of users2">
+    {{ usuario
+    }}<button (click)="deleteUser(usuario)">
+      X
+    </button>
+  </li>
+</ul>
+
+<form (submit)="addUser(newUser)">
+  <input type="text" #newUser />
+  <button>send user</button>
+</form>

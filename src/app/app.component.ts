@@ -22,6 +22,26 @@ export class AppComponent {
       city: 'Buenos Aires',
       telephone: 239283,
     };
-    hobbies: ['sex', 'drugs', 'rock and roll'];
+    this.hobbies = ['sex', 'drugs', 'rock and roll'];
+  }
+
+  users: string[] = ['ryan', 'joe', 'cameron'];
+  sayHello() {
+    alert('hello');
+  }
+
+  users2: string[] = ['luan', 'ivy', 'mia'];
+
+  deleteUser(usuario) {
+    for (let i = 0; i < this.users2.length; i++) {
+      if ((usuario = this.users2[i])) {
+        this.users2.splice(i, 1);
+      }
+    }
+  }
+
+  addUser(newUser) {
+    this.users2.push(newUser.value);
+    return false;
   }
 }
