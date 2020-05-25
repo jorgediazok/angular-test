@@ -33,3 +33,14 @@
   <input type="text" #newUser />
   <button>send user</button>
 </form>
+
+<form>
+  <input type="text" name="name" [(ngModel)]="name" />
+  <input type="text" name="age" [(ngModel)]="age" />
+</form>
+<div>
+  name:{{ name }} <br />
+  age:{{ age }}
+</div>
+
+<hr />
