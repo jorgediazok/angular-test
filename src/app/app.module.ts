@@ -10,9 +10,13 @@ import { AppComponent } from './app.component';
 import { DataService } from './data.service';
 import { AboutComponent } from './about/about.component';
 
-const routes: Route[] = [{ path: '', component: AppComponent }, {}, {}];
+const routes: Route[] = [
+  { path: '', component: AppComponent },
+  { path: 'about', component: AboutComponent },
+  {},
+];
 @NgModule({
-  declarations: [AppComponent, AboutComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
