@@ -1,5 +1,11 @@
-<ul>
-  <li *ngFor="let user of users">
-    {{ user }}
-  </li>
-</ul>
+<div>
+  <p>name: {{ name }}</p>
+  <p>street: {{ address.street }}</p>
+  <p>street: {{ address.city }}</p>
+  <p>street: {{ address.telephone }}</p>
+  <ul>
+    <li ngFor="let hobby of hobbies">
+      {{ hobby }}
+    </li>
+  </ul>
+</div>
